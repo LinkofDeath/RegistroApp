@@ -1,0 +1,13 @@
+ion-content{
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+.imagen {
+  max-width: 100%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+  height: 150px; /* Mantén la proporción original de la imagen */
+  display: block; /* Asegura que la imagen se muestre correctamente */
+  margin: 0 auto; /* Centra la imagen horizontalmente en su contenedor */
+}

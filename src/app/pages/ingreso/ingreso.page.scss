@@ -1,0 +1,84 @@
+.centrado-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.marco {
+  border: 3px solid gray;
+  padding: 16px;
+}
+
+.alinear-centro {
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+ion-content{
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-item{
+  --padding-botton: 10px;
+}
+
+
+// .image-container {
+//     max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+//     width: 80%; /* Puedes ajustar este valor según tus preferencias */
+//     margin: 0 auto; /* Centra el contenedor en la pantalla */
+//     // border: 1px solid #080707; /* Un borde opcional para resaltar la imagen */
+//     // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Una sombra ligera */
+// }
+
+// .image-container img {
+//     display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+//     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+//     height: auto; /* Mantiene la proporción original de la imagen */
+// }
+
+/* Haz que la tarjeta sea transparente */
+ion-card {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  border: none; /* Elimina el borde si es necesario */
+  width: 100%; /* Asegura que la tarjeta ocupe todo el ancho de la pantalla */
+  max-width: 400px; /* Establece un ancho máximo para la tarjeta (ajusta según tus necesidades) */
+  margin: 0 auto; /* Centra la tarjeta horizontalmente en la pantalla */
+  border: none; /* Elimina el borde si es necesario */
+}
+
+/* Ajusta el tamaño de la imagen */
+.imagen {
+  max-width: 100%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+  height: 90px; /* Mantén la proporción original de la imagen */
+  display: block; /* Asegura que la imagen se muestre correctamente */
+  margin: 0 auto; /* Centra la imagen horizontalmente en su contenedor */
+}
+
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f7f5f599;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.927);
+  border-radius: 10px; /* Redondea los bordes de la tarjeta */
+}
+
+.label{
+  background-color: rgba(0, 0, 0, 0.2); /* Utiliza rgba() para definir el color y la opacidad */
+  padding: 20px; /* Añade relleno al div para que sea visible */
+}
+
+.saludo{
+  color: white;
+}
+
+.login-boton{
+  padding: center;
+}
+

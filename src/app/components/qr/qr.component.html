@@ -1,0 +1,31 @@
+<ion-content class="ion-padding ion-text-center">
+
+  <div class="image-container ion-text-center">
+    <img src="assets/img/Logo-Duoc.png" alt="imagen" class="imagen-encabezado">
+  </div>
+
+  <div class="ion-padding-bottom">
+    <<ion-card>
+      ¡Bienvenido(a) {{ usuario.nombre }} {{ usuario.apellido }}!
+      <br><br>
+
+      <strong>Escanea el código QR para registrar tu asistencia</strong>
+      <br>
+
+  <ion-button color="warning" *ngIf="!escaneando" (click)="comenzarEscaneoQR()">
+    <ion-icon slot="start" name="videocam-outline"></ion-icon>
+    Comenzar Escaneo de QR
+  </ion-button>
+
+  <ion-button color="warnig" *ngIf="escaneando && plataforma === 'web'" (click)="detenerEscaneoQR()">
+    <ion-icon slot="start" name="stop-circle-outline"></ion-icon>
+    Detener escaneo de QR
+  </ion-button>
+
+</ion-card>
+</div>
+  <video #video [hidden]="!escaneando" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+
+</ion-content>
+

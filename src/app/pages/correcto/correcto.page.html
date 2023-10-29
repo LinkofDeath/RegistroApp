@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="back">
+  <img src="assets/img/Logo-Duoc.png" alt="Imagen de encabezado" class="imagen-encabezado">
+  <ion-title class="titulo">Sistema de Asistencia DUOC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <br><br><br><br><br>
+
+  <ion-card class="ion-text-center">
+      <br>
+      <img src="/assets/img/correcto.png" alt="Imagen bonita y elegante" width="225px" height="225px">
+      <ion-card-content>
+          <h1>¡Correcto!</h1>
+          <p>Su contraseña es {{ password }}</p>
+          <a (click)="iniciarSesion()">Iniciar Sesion</a>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

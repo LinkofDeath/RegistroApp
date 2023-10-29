@@ -1,0 +1,74 @@
+ion-content{
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-item{
+  --padding-botton: 10px;
+}
+
+.imagen-encabezado {
+  max-width: 100px; /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+  position: absolute;
+  top: 10px; /* Ajusta la posición vertical según tus necesidades */
+  right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+  opacity: 0.9;
+}
+
+ion-header{
+  background-color: black;
+}
+
+.titulo{
+  color: white;
+  font-size: 16px; /* Ajusta el tamaño de fuente según tus preferencias */
+  margin: 0; /* Elimina el margen si es necesario */
+}
+
+
+ion-card {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  border: none; /* Elimina el borde si es necesario */
+  width: 100%; /* Asegura que la tarjeta ocupe todo el ancho de la pantalla */
+  max-width: 400px; /* Establece un ancho máximo para la tarjeta (ajusta según tus necesidades) */
+  margin: 100px auto; /* Centra la tarjeta horizontalmente en la pantalla */
+  border: none; /* Elimina el borde si es necesario */
+}
+
+.card {
+  max-width: 400px; /* Ancho máximo de la card, ajusta según tus necesidades */
+  padding: 20px;
+  background-color: #f7f5f581;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.927);
+  border-radius: 10px; /* Redondea los bordes de la tarjeta */
+}
+
+.content-card{
+  background-color: rgba(255, 253, 253, 0.737); /* Utiliza rgba() para definir el color y la opacidad */
+  padding: 20px; /* Añade relleno al div para que sea visible */
+}
+
+.pregunta{
+  color: black;
+  font-size: 16px; /* Tamaño de fuente de la pregunta, ajusta según tus preferencias */
+  margin: 10px 0; /* Margen superior e inferior para separar la pregunta */
+}
+
+h2{
+  color: black;
+}
+
+ion-input {
+  width: 100%; /* Ajusta el ancho del input al 100% del contenedor */
+  max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+  margin-bottom: 10px; /* Margen inferior para separar el input de otros elementos */
+}
+
+.paso2{
+  color: black;
+}
+
+
+

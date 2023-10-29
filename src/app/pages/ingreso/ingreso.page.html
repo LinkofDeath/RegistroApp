@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+
+
+
+  <div class="ion-padding-vertical">
+    
+    <div class="image-container ion-text-center">
+      <img class="imagen" src="assets/img/Logo-Duoc.png">
+    </div>
+
+    <ion-card class="ion-text-center ion-padding-vertical ion-padding-horizontal">
+      
+      <ion-title class="inicio ion-padding-top ion-text-center">
+        <h1 class="saludo">Sistema de <br> Asistencia Duoc</h1>
+      </ion-title>
+
+
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <h2 class="saludo">!Bienvenido¡</h2>
+        </ion-label>
+      </ion-card-title>
+      <!-- para mostar el correo y la contraseña -->
+      <ion-card-content class="label"class="label">
+        <ion-row size="6">
+          <ion-col>
+            <ion-item>
+              <ion-input [(ngModel)]="correo" type="text" label="Correo" labelPlacement="floating"></ion-input>
+              <ion-icon color="primary" name="mail-outline" slot="start"></ion-icon>
+            </ion-item>
+    
+            <ion-item>
+              <ion-input [(ngModel)]="password" type="password" label="Contraseña" labelPlacement="floating"></ion-input>
+              <ion-icon color="primary" name="lock-closed" slot="start"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        
+        <!-- codigo de los botones -->
+        <ion-col class="login-boton" size="6">
+            <div>
+              <ion-button color="warning" shape="block" (click)="ingresar()">
+                Ingresar
+                <ion-icon slot="end" name="log-in-outline"></ion-icon>
+              </ion-button>
+            </div>
+        </ion-col>
+      </ion-card-content>
+
+      <ion-label>
+        <br>
+        <a (click)="ingresarPaginaValidarCorreo()">Recuperar contraseña</a>
+      </ion-label>
+
+    </ion-card>
+  </div>
+
+</ion-content>

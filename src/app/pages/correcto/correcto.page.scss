@@ -1,0 +1,57 @@
+ion-content {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-item {
+  --padding-botton: 10px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f7f5f581;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.927);
+  border-radius: 10px;
+  /* Redondea los bordes de la tarjeta */
+}
+
+.label {
+  background-color: rgba(255, 253, 253, 0.737);
+  /* Utiliza rgba() para definir el color y la opacidad */
+  padding: 20px;
+  /* Añade relleno al div para que sea visible */
+}
+
+ion-header {
+  background-color: black;
+}
+
+.titulo {
+  color: white;
+  font-size: 16px; /* Ajusta el tamaño de fuente según tus preferencias */
+  margin: 0; /* Elimina el margen si es necesario */
+}
+
+.imagen-encabezado {
+  max-width: 100px;
+  /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+  position: absolute;
+  top: 10px;
+  /* Ajusta la posición vertical según tus necesidades */
+  right: 10px;
+  /* Ajusta la posición horizontal según tus necesidades */
+  opacity: 0.9;
+}
+
+.card-celular {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  /* Ajusta el radio de borde según tus preferencias */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  /* Agrega sombra si lo deseas */
+}

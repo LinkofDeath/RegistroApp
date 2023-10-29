@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title id="animated-title" class="animated-title">Sistema de Asistencia DUOC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <app-qr [hidden]="componente_actual !== 'qr'" (qrCapturado)="cambiarComponente('miclase')"></app-qr>
+  <app-miclase [hidden]="componente_actual !== 'miclase'"></app-miclase>
+  <app-foro [hidden]="componente_actual !== 'foro'"></app-foro>
+  <app-misdatos [hidden]="componente_actual !== 'misdatos'"></app-misdatos>
+
+</ion-content>
+
+<div>
+  <ion-button color="warning" (click)="cerrarSesion()" expand="block" fill="clear" shape="round">
+    Cerrar sesión
+    <ion-icon slot="end" name="exit-outline"></ion-icon>
+  </ion-button>
+</div>
+
+
+
+<ion-footer>
+  <ion-tab-bar color="dark">
+    <ion-segment [(ngModel)]="componente_actual" (ngModelChange)="cambiarComponente($event)">
+      <ion-segment-button value="qr">
+        <ion-label color="light">QR</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="miclase">
+        <ion-label color="light">Mi clase</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="foro">
+        <ion-label color="light">Foro</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="misdatos">
+        <ion-label color="light">Mis datos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-tab-bar>
+</ion-footer>
+
+
