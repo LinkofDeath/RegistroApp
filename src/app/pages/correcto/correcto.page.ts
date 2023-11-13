@@ -16,6 +16,7 @@ import { DataBaseService } from 'src/app/services/data-base.service';
 export class CorrectoPage implements OnInit {
 
   password = '';
+  usuario = new Usuario
 
   constructor(
     private router: Router,
@@ -28,6 +29,7 @@ export class CorrectoPage implements OnInit {
       if (nav) {
         if (nav.extras.state) {
           const usuario: Usuario = nav.extras.state['usuario'];
+          console.log(this.usuario)
           this.password = usuario.password;
           return;
         }

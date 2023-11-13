@@ -15,7 +15,7 @@ import { DataBaseService } from 'src/app/services/data-base.service';
 })
 export class PreguntaPage implements OnInit {
 
-  public usuario: Usuario = new Usuario()
+  public usuario: Usuario = new Usuario();
   public respuestaSecreta = '';
 
   constructor(
@@ -42,22 +42,18 @@ export class PreguntaPage implements OnInit {
   ngOnInit() {
   }
 
-  public async RespuestaSecreta() {
-    const usuario = new Usuario;
-    const validarcorreo = await this.bd.leerUsuario(this.respuestaSecreta);
-        
+  public async ValidarRespuestaSecreta() {
+    if (this.usuario.respuestaSecreta === this.respuestaSecreta) {
       const navigationExtras: NavigationExtras = {
           state: {
             usuario: this.usuario
           }
         };
-        this.router.navigate(['/correcto'], navigationExtras);
+      this.router.navigate(['/correcto'], navigationExtras);
+    } else {
+      this.router.navigate(['/incorrecto']);
     }
-
-
-    private async mostrarAlerta(header: string, message: string): Promise<void> {
-      this.router.navigate(['/incorrecto'])
-    }
+  }
 
   public iniciarSesion(): void {
     this.router.navigate(['/ingreso'])

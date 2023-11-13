@@ -27,26 +27,20 @@ export class CorreoPage implements OnInit {
   ngOnInit() {
   }
 
-  public async validadcorreo() {
-    const usuario = new Usuario;
+  public async validarCorreo(): Promise<void> {
     const usuarioEncontrado = await this.bd.leerUsuario(this.correo);
     if (!usuarioEncontrado) {
+      this.router.navigate(['/incorrecto']);
     } else {
       const navigationExtras: NavigationExtras = {
         state: {
           usuario: usuarioEncontrado
         }
-        
       };
       this.router.navigate(['/pregunta'], navigationExtras);
     }
-    this.router.navigate(['incorrecto'])
   }
-
-
-  private async mostrarAlerta(header: string, message: string): Promise<void> {
-    this.router.navigate(['/incorrecto'])
-  }
+  
 
   public iniciarSesion(): void {
     this.router.navigate(['/ingreso'])
