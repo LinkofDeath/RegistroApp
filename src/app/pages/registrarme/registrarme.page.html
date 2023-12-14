@@ -1,15 +1,21 @@
-<ion-card>
-  <ion-card-content>
+<ion-header [translucent]="true">
+  <ion-toolbar color="back">
+      <img src="assets/img/Logo-Duoc.png" alt="Imagen de encabezado" class="imagen-encabezado">
+      <ion-title class="titulo">Sistema de Asistencia DUOC</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-    <h1 class="ion-text-center">!Bienvenido¡ <br> {{usuario.nombre}} {{usuario.apellido}} </h1>
+<ion-content [fullscreen]="true">
 
-    <strong class="ion-text-center">Mis Datos</strong>
-
+  <ion-card>
+    <div>
+      <h1 class="registro ion-text-center">Registro de usuario</h1>
+    </div>
 
     <div class="marco">
-    
+
       <ion-item>
-        <ion-input id="nombre" type="text" [(ngModel)]="usuario.nombre" label="Nombre" labelPlacement="floating"></ion-input>
+        <ion-input type="text" [(ngModel)]="usuario.nombre" label="Nombre" labelPlacement="floating"></ion-input>
         <ion-icon name="person-outline" slot="start"></ion-icon>
       </ion-item>
       <ion-item>
@@ -43,12 +49,19 @@
       </ion-item>
     
       <br>
+
+      
       <div class="centrar-boton">
-        <ion-button id="actualozarperfil" color="warning" (click)="actualizarPerfil()">
-          Actualizar mis datos
-        </ion-button>
+        <ion-button color="warning" (click)="registrarUsuario()">Crear mi nueva cuenta</ion-button>
+  
       </div>
     
     </div>
-  </ion-card-content>
-</ion-card>
+  </ion-card>
+
+  <p  class="ion-text-center">
+    <br>
+    <a (click)="iniciarSesion()">Iniciar sesión</a>
+  </p>
+
+</ion-content>

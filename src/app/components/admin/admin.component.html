@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <a #topOfPage href="#topOfPage"></a>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Administacion de Usuario</ion-card-title>
+      
+      <ion-card class="ion-text-left">
+          <strong>Administador del Sistema</strong>
+          <br>
+          {{ usuario.correo }}
+      </ion-card>
+
+    </ion-card-header>
+
+  </ion-card>
+
+  <ion-card class="sin-bordes">
+    <ion-card-title class="con-padding-top">Publicaciones recientes</ion-card-title>
+  </ion-card>
+
+  <ion-card *ngFor="let usu of usuarios">
+
+    <div>
+      {{ usuario.nombre}}
+    </div>
+  
+    <ion-card-content>
+
+    </ion-card-content>
+
+
+
+  </ion-card>
+
+</ion-content>

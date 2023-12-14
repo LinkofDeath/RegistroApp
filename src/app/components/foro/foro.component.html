@@ -4,19 +4,20 @@
 
     <ion-card-header>
       <ion-card-title>Ingresa tu publicación</ion-card-title>
+      
     </ion-card-header>
 
     <ion-item class="ion-padding-horizontal">
-      <ion-input [(ngModel)]="publicacion.titulo" label="Título" labelPlacement="floating"></ion-input>
+      <ion-input id="titulo" [(ngModel)]="publicacion.titulo" label="Título" labelPlacement="floating"></ion-input>
     </ion-item>
 
     <ion-item class="ion-padding-horizontal">
-      <ion-textarea [(ngModel)]="publicacion.contenido" label="Contenido" labelPlacement="floating"></ion-textarea>
+      <ion-textarea id="contenido" [(ngModel)]="publicacion.contenido" label="Contenido" labelPlacement="floating"></ion-textarea>
     </ion-item>
 
     <div class="alinear-centro">
-      <ion-button color="warning" (click)="limpiarPublicacion()">Limpiar</ion-button>
-      <ion-button color="warning" (click)="guardarPublicacion()">Guardar</ion-button>
+      <ion-button id="limpiar" color="warning" (click)="limpiarPublicacion()">Limpiar</ion-button>
+      <ion-button id="guardar" color="warning" (click)="guardarPublicacion()">Guardar</ion-button>
     </div>
 
   </ion-card>
@@ -44,7 +45,7 @@
         <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
       </ion-button>
 
-      <ion-button (click)="eliminarPublicacion(pub)">
+      <ion-button id="eliminar" (click)="eliminarPublicacion(pub)">
         <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
       </ion-button>
     </div>

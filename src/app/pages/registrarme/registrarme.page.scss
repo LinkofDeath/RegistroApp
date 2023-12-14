@@ -1,0 +1,31 @@
+// marco de registro
+.marco {
+  padding: 16px;
+}
+
+// boton-crarcuenta
+.centrar-boton {
+  text-align: center;
+}
+
+.imagen-encabezado {
+  max-width: 100px; /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+  position: absolute;
+  top: 10px; /* Ajusta la posición vertical según tus necesidades */
+  right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+  opacity: 0.9;
+}
+
+ion-header{
+  background-color: black;
+}
+
+.titulo{
+  color: wheat;
+  font-size: 16px; /* Ajusta el tamaño de fuente según tus preferencias */
+  margin: 0; /* Elimina el margen si es necesario */
+}
+
+.registro{
+  color: black;
+}

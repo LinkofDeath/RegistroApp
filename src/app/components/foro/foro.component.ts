@@ -30,7 +30,9 @@ export class ForoComponent implements OnInit  {
     contenido: ''};
   publicaciones: any;
 
-  constructor(private authService: AuthService, private api: APIClientService) { 
+  constructor(
+    private authService: AuthService, 
+    private api: APIClientService) { 
     this.api.listaPublicaciones.subscribe((publicaciones) => {
       publicaciones.reverse(); // Ordenar de más nueva a mán antigua
       this.publicaciones = publicaciones;

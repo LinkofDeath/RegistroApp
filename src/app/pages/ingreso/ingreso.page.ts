@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
+import { showToast } from 'src/app/tools/message-routines';
 
 @Component({
   selector: 'app-ingreso',
@@ -14,8 +15,9 @@ import { Router } from '@angular/router';
 })
 export class IngresoPage implements OnInit {
 
-  correo = 'atorres@duocuc.cl';
-  password = '1234';
+  correo ='';
+  password = '';
+  verClicDeBoton = false;
 
   constructor(
     private authService: AuthService,
@@ -25,11 +27,16 @@ export class IngresoPage implements OnInit {
   }
 
   ingresar() {
+    showToast('CLIC BOTON INGRESAR')
     this.authService.login(this.correo, this.password);
   }
 
   public ingresarPaginaValidarCorreo(): void {
     this.router.navigate(['/correo'])
+  }
+
+  public Registrarme(): void {
+    this.router.navigate(['/registrarme'])
   }
   
 }

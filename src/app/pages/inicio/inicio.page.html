@@ -16,11 +16,13 @@
   <app-miclase [hidden]="componente_actual !== 'miclase'"></app-miclase>
   <app-foro [hidden]="componente_actual !== 'foro'"></app-foro>
   <app-misdatos [hidden]="componente_actual !== 'misdatos'"></app-misdatos>
+  <app-admin [hidden]="componente_actual !== 'admin'"></app-admin>
 
 </ion-content>
 
+
 <div>
-  <ion-button color="warning" (click)="cerrarSesion()" expand="block" fill="clear" shape="round">
+  <ion-button id="cerrarsesion" color="warning" (click)="cerrarSesion()" expand="block" fill="clear" shape="round">
     Cerrar sesión
     <ion-icon slot="end" name="exit-outline"></ion-icon>
   </ion-button>
@@ -37,11 +39,14 @@
       <ion-segment-button value="miclase">
         <ion-label color="light">Mi clase</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="foro">
+      <ion-segment-button id="foro" value="foro">
         <ion-label color="light">Foro</ion-label>
       </ion-segment-button>
       <ion-segment-button value="misdatos">
         <ion-label color="light">Mis datos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="admin">
+        <ion-label color="light">Admin</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-tab-bar>

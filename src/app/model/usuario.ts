@@ -3,6 +3,7 @@ import { showAlertDUOC } from "../tools/message-routines";
 
 export class Usuario {
 
+  roles: string[] = [];
   correo = '';
   password = '';
   nombre = '';
@@ -71,6 +72,7 @@ export class Usuario {
       || this.validarPreguntaSecreta(preguntaSecreta)
       || this.validarRespuestaSecreta(respuestaSecreta)
   }
+  
 
 }
   

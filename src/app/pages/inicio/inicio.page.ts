@@ -10,6 +10,9 @@ import { MisdatosComponent } from 'src/app/components/misdatos/misdatos.componen
 import { DataBaseService } from 'src/app/services/data-base.service';
 import { APIClientService } from 'src/app/services/apiclient.service';
 import { Usuario } from 'src/app/model/usuario';
+import { AdminComponent } from 'src/app/components/admin/admin.component';
+import { showToast } from 'src/app/tools/message-routines';
+
 
 @Component({
   selector: 'app-inicio',
@@ -17,7 +20,8 @@ import { Usuario } from 'src/app/model/usuario';
   styleUrls: ['./inicio.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule,
-    QrComponent, MiclaseComponent, ForoComponent, MisdatosComponent,
+    QrComponent, MiclaseComponent, ForoComponent, MisdatosComponent,AdminComponent,
+    
   ],
 })
 export class InicioPage implements OnInit {
@@ -37,6 +41,7 @@ export class InicioPage implements OnInit {
     this.componente_actual = 'qr';
     this.bd.datosQR.next('');
   }
+  
 
   cambiarComponente(nombreComponente: string) {
     this.componente_actual = nombreComponente;
@@ -45,6 +50,7 @@ export class InicioPage implements OnInit {
   }
 
   cerrarSesion() {
+    showToast('CLIC BOTON SALIR');
     this.authService.logout();
   }
 

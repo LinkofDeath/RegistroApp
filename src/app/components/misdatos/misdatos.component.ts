@@ -19,7 +19,9 @@ export class MisdatosComponent  implements OnInit {
   usuario = new Usuario();
   repeticionPassword = '';
 
-  constructor(private authService: AuthService, private bd: DataBaseService) { }
+  constructor(
+    private authService: AuthService, 
+    private bd: DataBaseService) { }
 
   async ngOnInit() {
     this.authService.usuarioAutenticado.subscribe((usuario) => {
